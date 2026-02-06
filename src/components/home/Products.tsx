@@ -7,24 +7,32 @@ const products = [
     name: "Premium Hair Oil",
     description: "Nourish and strengthen your hair with our blend of natural oils",
     image: "https://bloomoil.beauty/7a0fbc36-8365-4f9a-a5ae-4c3462d206a2.png",
+    price: 25,
+    volume: "100 ml",
   },
   {
     id: "body",
     name: "Luxurious Body Oil",
     description: "Hydrate and rejuvenate your skin with our premium body oil blend",
     image: "https://bloomoil.beauty/81c22afd-86bf-446e-a6cc-9ea82532674e.png",
+    price: 30,
+    volume: "100 ml",
   },
   {
     id: "nails",
     name: "Nail Care Oil",
     description: "Strengthen and nourish your nails with our specialized formula",
     image: "https://i.postimg.cc/ZKk5ZJf7/1770276529331-019c2cb3-712c-772e-b454-7564990e900a.png",
+    price: 7,
+    volume: "15 ml",
   },
   {
     id: "eyebrows",
     name: "Eyebrows Enhancement Oil",
     description: "Achieve fuller, more defined eyebrows with our nourishing oil",
     image: "https://bloomoil.beauty/d8c09846-fa25-40cf-988a-c3078d77f9bd.png",
+    price: 12,
+    volume: "15 ml",
   },
 ];
 
@@ -63,7 +71,10 @@ const Products = () => {
                   {product.description}
                 </p>
                 <div className="flex items-center justify-between pt-2">
-                  <span className="text-sm font-medium text-primary">Contact for Price</span>
+                  <div className="flex flex-col">
+                    <span className="text-lg font-bold text-primary">${product.price}</span>
+                    <span className="text-xs text-muted-foreground">{product.volume}</span>
+                  </div>
                   <span className="text-primary flex items-center gap-1 text-sm font-medium group-hover:gap-2 transition-all">
                     Learn More <ArrowRight className="w-4 h-4" />
                   </span>
