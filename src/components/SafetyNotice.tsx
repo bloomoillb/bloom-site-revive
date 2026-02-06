@@ -15,7 +15,6 @@ const SafetyNotice = () => {
             <li>• <strong>Patch Test Required:</strong> Always perform a patch test 24 hours before first use.</li>
             <li>• <strong>External Use Only:</strong> Keep away from eyes and mucous membranes.</li>
             <li>• <strong>Allergies:</strong> Discontinue use if irritation, redness, or allergic reaction occurs.</li>
-            <li>• <strong>Pregnancy:</strong> Consult your doctor before use if pregnant or nursing.</li>
             <li>• <strong>Storage:</strong> Store in a cool, dry place away from direct sunlight.</li>
             <li>• <strong>Children:</strong> Keep out of reach of children.</li>
           </ul>
