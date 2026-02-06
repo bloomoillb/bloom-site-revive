@@ -18,7 +18,7 @@ const products = [
     id: "nails",
     name: "Nail Care Oil",
     description: "Strengthen and nourish your nails with our specialized formula",
-    image: "https://i.postimg.cc/TKjQ9xwq/nails-oil.jpg",
+    image: "https://i.postimg.cc/ZKk5ZJf7/1770276529331-019c2cb3-712c-772e-b454-7564990e900a.png",
   },
   {
     id: "eyebrows",

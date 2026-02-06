@@ -95,9 +95,12 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-background/10 mt-10 pt-6 text-center">
+        <div className="border-t border-background/10 mt-10 pt-6 text-center space-y-2">
           <p className="text-background/50 text-sm">
             © {new Date().getFullYear()} Bloom Oil. All rights reserved. Made with love for natural beauty.
+          </p>
+          <p className="text-primary font-semibold text-sm">
+            Made in Lebanon 🇱🇧
           </p>
         </div>
       </div>
