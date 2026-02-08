@@ -12,6 +12,8 @@ const productsData = {
     tagline: "Nourish and strengthen your hair naturally",
     description: "Our Premium Hair Oil is a luxurious blend of nature's finest oils, carefully formulated to transform your hair from the roots to the tips. Enriched with vitamins and essential fatty acids, this oil deeply nourishes each strand while promoting healthy hair growth.",
     image: "https://bloomoil.beauty/7a0fbc36-8365-4f9a-a5ae-4c3462d206a2.png",
+    price: 25,
+    volume: "100 ml",
     benefits: [
       "Reduces hair breakage and split ends",
       "Promotes healthy hair growth",
@@ -27,6 +29,8 @@ const productsData = {
     tagline: "Hydrate and rejuvenate your skin",
     description: "Indulge in our Luxurious Body Oil, a rich blend that melts into your skin, leaving it silky smooth and deeply moisturized. Perfect for daily use, this lightweight yet nourishing formula absorbs quickly without leaving a greasy residue.",
     image: "https://bloomoil.beauty/81c22afd-86bf-446e-a6cc-9ea82532674e.png",
+    price: 30,
+    volume: "100 ml",
     benefits: [
       "Deep hydration for all skin types",
       "Improves skin elasticity",
@@ -42,6 +46,8 @@ const productsData = {
     tagline: "Strengthen and nourish your nails",
     description: "Give your nails the care they deserve with our specialized Nail Care Oil. This concentrated formula penetrates deep into the nail bed and cuticles, providing essential nutrients for stronger, healthier nails.",
     image: "https://i.postimg.cc/TKjQ9xwq/nails-oil.jpg",
+    price: 7,
+    volume: "15 ml",
     benefits: [
       "Strengthens weak, brittle nails",
       "Softens and conditions cuticles",
@@ -57,6 +63,8 @@ const productsData = {
     tagline: "Achieve fuller, more defined eyebrows",
     description: "Transform your eyebrows with our specially formulated Enhancement Oil. Designed to stimulate hair growth and nourish existing brows, this oil helps you achieve naturally fuller, thicker eyebrows over time.",
     image: "https://bloomoil.beauty/d8c09846-fa25-40cf-988a-c3078d77f9bd.png",
+    price: 12,
+    volume: "15 ml",
     benefits: [
       "Promotes eyebrow hair growth",
       "Thickens and darkens brows naturally",
@@ -142,7 +150,10 @@ const ProductPage = () => {
                 </div>
 
                 <div className="space-y-3">
-                  <p className="text-2xl font-serif font-bold text-primary">Contact for Price</p>
+                  <div className="flex items-baseline gap-2">
+                    <p className="text-2xl font-serif font-bold text-primary">${product.price}</p>
+                    <span className="text-sm text-muted-foreground">{product.volume}</span>
+                  </div>
                   <Button variant="hero" size="xl" className="w-full sm:w-auto" asChild>
                     <a href={`https://wa.me/79403188?text=Hello! I'm interested in the ${product.name}.`} className="flex items-center gap-2">
                       <MessageCircle className="w-5 h-5" />
