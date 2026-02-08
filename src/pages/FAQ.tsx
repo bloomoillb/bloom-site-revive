@@ -12,7 +12,15 @@ import {
 const faqs = [
   {
     question: "What makes Bloom Oil products different from other beauty oils?",
-    answer: "Bloom Oil products are crafted using 100% natural, organic ingredients with no artificial additives or preservatives. Our oils are cold-pressed to preserve maximum nutrients and are never tested on animals. Each formula is carefully balanced to provide visible results while being gentle on all skin types.",
+    answer: "Bloom Oil products are crafted using 100% natural oils with no artificial additives or preservatives. Our oils are cold-pressed to preserve maximum nutrients and are never tested on animals. Each formula is carefully balanced to provide visible results while being gentle on all skin types.",
+  },
+  {
+    question: "Are your oils 100% natural?",
+    answer: "Yes! All Bloom Oil products are made with 100% natural oils sourced from the finest organic ingredients. We use no synthetic fragrances, parabens, or artificial preservatives. What you get is pure, nature-inspired beauty care.",
+  },
+  {
+    question: "How long does delivery take?",
+    answer: "Delivery typically takes 3 to 6 business days depending on your location. Once your order is confirmed via WhatsApp, we'll keep you updated with shipping information. We offer cash on delivery for your convenience.",
   },
   {
     question: "How long before I see results?",
@@ -31,16 +39,8 @@ const faqs = [
     answer: "Absolutely! Our products are designed to complement each other. Many customers use our hair oil and body oil together as part of their self-care routine. Just be sure to allow each product to absorb properly before applying another.",
   },
   {
-    question: "Are Bloom Oil products safe during pregnancy?",
-    answer: "While our products contain natural ingredients, we recommend consulting with your healthcare provider before using any new skincare products during pregnancy or while nursing. This is a precautionary measure for all topical products.",
-  },
-  {
     question: "How do I place an order?",
     answer: "Ordering is easy! Simply contact us via WhatsApp by clicking the 'Order Now' button on any product page. Send us a message with your desired products, and our team will guide you through the ordering process. We offer cash on delivery for your convenience.",
-  },
-  {
-    question: "What is your delivery policy?",
-    answer: "We offer nationwide delivery with cash on delivery payment option. Delivery times vary by location but typically take 3-7 business days. You'll receive a confirmation message with tracking details once your order is dispatched.",
   },
   {
     question: "Do you offer refunds or exchanges?",
