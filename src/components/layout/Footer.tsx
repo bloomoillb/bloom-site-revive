@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom";
 import { Leaf, MessageCircle, Mail, MapPin } from "lucide-react";
+import Newsletter from "@/components/Newsletter";
 
 const Footer = () => {
   return (
     <footer className="bg-foreground text-background">
-      <div className="container mx-auto px-4 py-12">
+      {/* Newsletter Section */}
+      <div className="container mx-auto px-4 pt-12 pb-8">
+        <Newsletter />
+      </div>
+      
+      <div className="container mx-auto px-4 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="space-y-4">
