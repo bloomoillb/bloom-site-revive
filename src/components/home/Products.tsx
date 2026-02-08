@@ -8,7 +8,7 @@ const products = [
     description: "Nourish and strengthen your hair with our blend of natural oils",
     image: "https://bloomoil.beauty/7a0fbc36-8365-4f9a-a5ae-4c3462d206a2.png",
     price: 25,
-    volume: "100 ml",
+    volume: "100 ml / 3.4 oz",
   },
   {
     id: "body",
@@ -16,7 +16,7 @@ const products = [
     description: "Hydrate and rejuvenate your skin with our premium body oil blend",
     image: "https://bloomoil.beauty/81c22afd-86bf-446e-a6cc-9ea82532674e.png",
     price: 30,
-    volume: "100 ml",
+    volume: "100 ml / 3.4 oz",
   },
   {
     id: "nails",
@@ -24,7 +24,7 @@ const products = [
     description: "Strengthen and nourish your nails with our specialized formula",
     image: "https://i.postimg.cc/ZKk5ZJf7/1770276529331-019c2cb3-712c-772e-b454-7564990e900a.png",
     price: 7,
-    volume: "15 ml",
+    volume: "15 ml / 0.5 oz",
   },
   {
     id: "eyebrows",
@@ -32,7 +32,7 @@ const products = [
     description: "Achieve fuller, more defined eyebrows with our nourishing oil",
     image: "https://bloomoil.beauty/d8c09846-fa25-40cf-988a-c3078d77f9bd.png",
     price: 12,
-    volume: "15 ml",
+    volume: "15 ml / 0.5 oz",
   },
 ];
 
