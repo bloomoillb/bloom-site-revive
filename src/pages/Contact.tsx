@@ -94,10 +94,10 @@ const Contact = () => {
                     <div>
                       <h3 className="font-semibold mb-1">Email</h3>
                       <a
-                        href="mailto:hello@bloomoil.beauty"
+                        href="mailto:info@bloomoil.beauty"
                         className="text-muted-foreground hover:text-primary transition-colors"
                       >
-                        hello@bloomoil.beauty
+                        info@bloomoil.beauty
                       </a>
                       <p className="text-sm text-muted-foreground mt-1">
                         For business inquiries and partnerships
