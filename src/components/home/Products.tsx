@@ -6,7 +6,7 @@ const products = [
     id: "hair",
     name: "Premium Hair Oil",
     description: "Nourish and strengthen your hair with our blend of natural oils",
-    image: "https://bloomoil.beauty/7a0fbc36-8365-4f9a-a5ae-4c3462d206a2.png",
+    image: "/hair-oil-product.png",
     price: 25,
     volume: "100 ml / 3.4 oz",
   },
