@@ -21,7 +21,13 @@ const productsData = {
       "Adds brilliant shine and softness",
       "Helps prevent breakage and split ends",
     ],
-    ingredients: ["Argan Oil", "Castor Oil", "Jojoba Oil", "Vitamin E", "Rosemary Essential Oil"],
+    ingredients: [
+      { name: "Coconut Oil", benefit: "Deep hydration" },
+      { name: "Castor Oil", benefit: "Hair growth & density" },
+      { name: "Sweet Almond Oil", benefit: "Nourishment & softness" },
+      { name: "Rosemary Extract", benefit: "Scalp health" },
+      { name: "Vitamin E", benefit: "Antioxidant protection" },
+    ],
     usage: "Apply a few drops to damp or dry hair. Massage gently from roots to tips. For deep conditioning, apply generously and leave overnight. Use 2-3 times per week for best results.",
   },
   body: {
@@ -194,13 +200,19 @@ const ProductPage = () => {
                   <div className="w-10 h-10 rounded-full bg-bloom-pink-soft flex items-center justify-center">
                     <Leaf className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="font-serif font-semibold text-lg">Natural Ingredients</h3>
+                  <h3 className="font-serif font-semibold text-lg">Premium Natural Ingredients</h3>
                 </div>
                 <ul className="space-y-2">
-                  {product.ingredients.map((ingredient, index) => (
+                  {Array.isArray(product.ingredients) && product.ingredients.map((ingredient, index) => (
                     <li key={index} className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-primary" />
-                      <span className="text-sm text-muted-foreground">{ingredient}</span>
+                      <div className="w-2 h-2 rounded-full bg-primary flex-shrink-0" />
+                      {typeof ingredient === 'object' && 'name' in ingredient ? (
+                        <span className="text-sm text-muted-foreground">
+                          <span className="font-medium text-foreground">{ingredient.name}</span> - {ingredient.benefit}
+                        </span>
+                      ) : (
+                        <span className="text-sm text-muted-foreground">{ingredient}</span>
+                      )}
                     </li>
                   ))}
                 </ul>
