@@ -56,11 +56,11 @@ const Products = () => {
               to={`/product/${product.id}`}
               className="group bg-card rounded-2xl overflow-hidden bloom-shadow-card hover:bloom-shadow-hover transition-all duration-300 hover:-translate-y-1"
             >
-              <div className="aspect-square overflow-hidden bg-bloom-cream">
+              <div className="aspect-[3/4] overflow-hidden bg-bloom-cream">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-5 space-y-3">

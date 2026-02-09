@@ -118,11 +118,11 @@ const ProductPage = () => {
             <div className="grid lg:grid-cols-2 gap-10 md:gap-16 items-center">
               {/* Image */}
               <div className="relative">
-                <div className="aspect-square rounded-3xl overflow-hidden bg-bloom-cream bloom-shadow-card">
+                <div className="rounded-3xl overflow-hidden bg-bloom-cream bloom-shadow-card">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
                 <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl" />
