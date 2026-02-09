@@ -11,7 +11,7 @@ const productsData = {
     name: "Premium Hair Oil",
     tagline: "Nourish and strengthen your hair naturally",
     description: "Our Premium Hair Oil is a luxurious blend of nature's finest oils, carefully formulated to transform your hair from the roots to the tips. Enriched with vitamins and essential fatty acids, this oil deeply nourishes each strand while promoting healthy hair growth.",
-    image: "https://bloomoil.beauty/7a0fbc36-8365-4f9a-a5ae-4c3462d206a2.png",
+    image: "/hair-oil-product.png",
     price: 25,
     volume: "100 ml / 3.4 oz",
     benefits: [
