@@ -1,40 +1,11 @@
-import { useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import SafetyNotice from "@/components/SafetyNotice";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { MessageCircle, Mail, MapPin, Clock, Send } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
+import { MessageCircle, Mail, MapPin, Clock } from "lucide-react";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    telephone: "",
-    query: "",
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    const subject = encodeURIComponent(`Contact Query from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nTelephone: ${formData.telephone}\n\nQuery:\n${formData.query}`
-    );
-
-    window.location.href = `mailto:info@bloomoil.beauty?subject=${subject}&body=${body}`;
-
-    toast({
-      title: "Opening your email app",
-      description: "Your message will be sent to info@bloomoil.beauty.",
-    });
-
-    setFormData({ name: "", telephone: "", query: "" });
-  };
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -55,7 +26,7 @@ const Contact = () => {
         {/* Contact Content */}
         <section className="py-12 md:py-20">
           <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+            <div className="max-w-3xl mx-auto">
               {/* Contact Info */}
               <div className="space-y-8">
                 <div>
@@ -144,61 +115,6 @@ const Contact = () => {
                     </a>
                   </Button>
                 </div>
-              </div>
-
-              {/* Contact Form */}
-              <div className="bg-card rounded-2xl p-6 md:p-8 bloom-shadow-card">
-                <h2 className="text-2xl font-serif font-bold mb-6">
-                  Send Us a Message
-                </h2>
-                <form onSubmit={handleSubmit} className="space-y-5">
-                  <div className="space-y-2">
-                    <Label htmlFor="name">Your Name</Label>
-                    <Input
-                      id="name"
-                      placeholder="Enter your name"
-                      value={formData.name}
-                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      required
-                      className="rounded-lg"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="telephone">Telephone Number</Label>
-                    <Input
-                      id="telephone"
-                      type="tel"
-                      placeholder="Enter your telephone number"
-                      value={formData.telephone}
-                      onChange={(e) => setFormData({ ...formData, telephone: e.target.value })}
-                      required
-                      className="rounded-lg"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="query">Your Query</Label>
-                    <Textarea
-                      id="query"
-                      placeholder="Tell us how we can help you..."
-                      rows={5}
-                      value={formData.query}
-                      onChange={(e) => setFormData({ ...formData, query: e.target.value })}
-                      required
-                      className="rounded-lg resize-none"
-                    />
-                  </div>
-
-                  <Button type="submit" variant="hero" size="lg" className="w-full">
-                    <Send className="w-5 h-5" />
-                    Send Message
-                  </Button>
-
-                  <p className="text-xs text-muted-foreground text-center">
-                    Your email app will open to send your query to info@bloomoil.beauty
-                  </p>
-                </form>
               </div>
             </div>
           </div>
