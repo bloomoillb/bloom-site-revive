@@ -14,27 +14,26 @@ const Contact = () => {
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
-    subject: "",
-    message: "",
+    telephone: "",
+    query: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Create WhatsApp message with form data
-    const whatsappMessage = encodeURIComponent(
-      `Hello! My name is ${formData.name}.\n\nSubject: ${formData.subject}\n\nMessage: ${formData.message}\n\nEmail: ${formData.email}`
+
+    const subject = encodeURIComponent(`Contact Query from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nTelephone: ${formData.telephone}\n\nQuery:\n${formData.query}`
     );
-    
-    window.open(`https://wa.me/79403188?text=${whatsappMessage}`, "_blank");
-    
+
+    window.location.href = `mailto:info@bloomoil.beauty?subject=${subject}&body=${body}`;
+
     toast({
-      title: "Redirecting to WhatsApp",
-      description: "Your message will be sent via WhatsApp.",
+      title: "Opening your email app",
+      description: "Your message will be sent to info@bloomoil.beauty.",
     });
 
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    setFormData({ name: "", telephone: "", query: "" });
   };
 
   return (
@@ -166,38 +165,26 @@ const Contact = () => {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email Address</Label>
+                    <Label htmlFor="telephone">Telephone Number</Label>
                     <Input
-                      id="email"
-                      type="email"
-                      placeholder="Enter your email"
-                      value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                      id="telephone"
+                      type="tel"
+                      placeholder="Enter your telephone number"
+                      value={formData.telephone}
+                      onChange={(e) => setFormData({ ...formData, telephone: e.target.value })}
                       required
                       className="rounded-lg"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
-                    <Input
-                      id="subject"
-                      placeholder="What's this about?"
-                      value={formData.subject}
-                      onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                      required
-                      className="rounded-lg"
-                    />
-                  </div>
-
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="query">Your Query</Label>
                     <Textarea
-                      id="message"
+                      id="query"
                       placeholder="Tell us how we can help you..."
                       rows={5}
-                      value={formData.message}
-                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      value={formData.query}
+                      onChange={(e) => setFormData({ ...formData, query: e.target.value })}
                       required
                       className="rounded-lg resize-none"
                     />
@@ -205,11 +192,11 @@ const Contact = () => {
 
                   <Button type="submit" variant="hero" size="lg" className="w-full">
                     <Send className="w-5 h-5" />
-                    Send Message via WhatsApp
+                    Send Message
                   </Button>
 
                   <p className="text-xs text-muted-foreground text-center">
-                    Your message will open in WhatsApp for direct communication
+                    Your email app will open to send your query to info@bloomoil.beauty
                   </p>
                 </form>
               </div>
