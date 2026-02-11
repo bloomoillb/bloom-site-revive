@@ -28,8 +28,8 @@ const products = [
   },
   {
     id: "eyebrows",
-    name: "Eyebrows Enhancement Oil",
-    description: "Achieve fuller, more defined eyebrows with our nourishing oil",
+    name: "Brow & Lash Elixir",
+    description: "Achieve fuller, more defined brows and lashes with our nourishing elixir",
     image: "https://bloomoil.beauty/d8c09846-fa25-40cf-988a-c3078d77f9bd.png",
     price: 12,
     volume: "15 ml / 0.5 oz",
