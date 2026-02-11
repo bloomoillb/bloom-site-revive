@@ -83,7 +83,7 @@ const productsData = {
       "Fills in sparse areas over time",
       "Gentle formula for sensitive skin",
     ],
-    ingredients: ["Castor Oil", "Vitamin E", "Rosemary Oil", "Coconut Oil", "Biotin"],
+    ingredients: ["Castor Oil", "Sweet Almond Oil", "Argan Oil", "Vitamin E"],
     usage: "Using the applicator or a clean spoolie, apply a thin layer to brows and lashes before bedtime. Leave overnight and wash off in the morning. Use consistently for 4-6 weeks to see results.",
   },
 };
