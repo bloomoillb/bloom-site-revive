@@ -65,21 +65,21 @@ const productsData = {
     usage: "Apply a small drop to each nail and cuticle. Massage gently for 1-2 minutes. Use twice daily for best results, especially before bedtime.",
   },
   eyebrows: {
-    name: "Eyebrows Enhancement Oil",
-    tagline: "Achieve fuller, more defined eyebrows",
-    description: "Transform your eyebrows with our specially formulated Enhancement Oil. Designed to stimulate hair growth and nourish existing brows, this oil helps you achieve naturally fuller, thicker eyebrows over time.",
+    name: "Brow & Lash Elixir",
+    tagline: "Achieve fuller, more defined brows and lashes",
+    description: "Transform your brows and lashes with our specially formulated Elixir. Designed to stimulate hair growth and nourish existing brows and lashes, this elixir helps you achieve naturally fuller, thicker results over time.",
     image: "https://bloomoil.beauty/d8c09846-fa25-40cf-988a-c3078d77f9bd.png",
     price: 12,
     volume: "15 ml / 0.5 oz",
     benefits: [
-      "Promotes eyebrow hair growth",
+      "Promotes brow and lash growth",
       "Thickens and darkens brows naturally",
-      "Conditions and softens brow hairs",
+      "Conditions and softens brow and lash hairs",
       "Fills in sparse areas over time",
       "Gentle formula for sensitive skin",
     ],
     ingredients: ["Castor Oil", "Vitamin E", "Rosemary Oil", "Coconut Oil", "Biotin"],
-    usage: "Using the applicator or a clean spoolie, apply a thin layer to eyebrows before bedtime. Leave overnight and wash off in the morning. Use consistently for 4-6 weeks to see results.",
+    usage: "Using the applicator or a clean spoolie, apply a thin layer to brows and lashes before bedtime. Leave overnight and wash off in the morning. Use consistently for 4-6 weeks to see results.",
   },
 };
 
