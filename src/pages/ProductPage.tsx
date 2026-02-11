@@ -44,7 +44,7 @@ const productsData = {
       "Provides a healthy, natural glow",
       "Soothes and calms irritated skin",
     ],
-    ingredients: ["Sweet Almond Oil", "Coconut Oil", "Avocado Oil", "Vitamin E", "Lavender Essential Oil"],
+    ingredients: ["Sweet Almond Oil", "Vitamin E", "Sweet Orange Oil", "Rosemary Oil", "Ginger Oil"],
     usage: "Apply after showering while skin is still slightly damp. Massage in circular motions until fully absorbed. Use daily for best results.",
   },
   nails: {
