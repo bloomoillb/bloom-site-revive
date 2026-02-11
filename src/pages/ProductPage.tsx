@@ -240,7 +240,7 @@ const ProductPage = () => {
         {/* Safety Notice */}
         <section className="py-12 md:py-16 bg-background">
           <div className="container mx-auto px-4 max-w-3xl">
-            <SafetyNotice />
+            <SafetyNotice productId={productId} />
           </div>
         </section>
       </main>
