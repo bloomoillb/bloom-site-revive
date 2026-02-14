@@ -3,13 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Mail } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!email.trim()) {
@@ -33,15 +34,28 @@ const Newsletter = () => {
 
     setIsLoading(true);
     
-    // Simulate subscription (replace with actual API call when backend is ready)
-    setTimeout(() => {
+    try {
+      const { data, error } = await supabase.functions.invoke('newsletter-notify', {
+        body: { email: email.trim() },
+      });
+
+      if (error) throw error;
+
       toast({
         title: "Subscribed!",
         description: "Thank you for subscribing to our newsletter.",
       });
       setEmail("");
+    } catch (err) {
+      console.error('Newsletter error:', err);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   return (
